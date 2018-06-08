@@ -10,7 +10,6 @@ from tkinter.filedialog import askopenfilename
 from TextPrep import ImgPrep
 import threading
 import predictor
-import toCSV
 from multiprocessing.pool import ThreadPool
 TEXT13 = ("helvetica", 13)
 COLOR_MAIN = "#262626"
@@ -396,7 +395,8 @@ class MainPage(tk.Frame):
     def analyse(self, tp):
         print("1")
         txt = tp.analyse(np.array(self.currImg))
-
+        p = self.currImg
+        print("shape",p.shape)
         print(txt)
         self.imgText["text"] = txt
         #thread = threading.Thread(target=tp.analyse(self.img))
