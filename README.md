@@ -6,3 +6,4 @@ Currently image name can be input using the command line through the command
   "python textprep.py <imageName.extension>"
 The neural network confuses the letter "O" and the digit "0" when shown to it as a standalone image. Currently no known solution exists to fix this issue
 other than to look at the context because both symbols look similar.
+Ongoing work involves building a GUI and optimizing the neural network and the pre-processor module.
