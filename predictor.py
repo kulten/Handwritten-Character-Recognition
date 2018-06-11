@@ -4,9 +4,8 @@ import numpy as np
 
 
 def neural(img,l):
-    x = np.array(img)
+    x = np.array(img,dtype = np.float32)
     images = x.reshape(l, 784)
-    images = images.astype(np.float)
 
     images = np.multiply(images, 1.0 / 255.0)
 
