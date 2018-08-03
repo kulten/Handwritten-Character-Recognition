@@ -10,25 +10,25 @@ Ongoing work involves building a GUI and optimizing the neural network and the p
 
 Installation
 
-Python
-  Windows command line:
-    cd file_directory
+Python  
+  Windows command line:  
+    cd file_directory  
     
     pip install pandas
     pip install tensorflow
     pip install opencv-python
     pip install numpy
   
-Npm
-  download and install npm v10.8.0 form here https://nodejs.org/en/ 
-  Windows command line:
-    cd file_directory
+Npm  
+  download and install npm v10.8.0 form here https://nodejs.org/en/  
+  Windows command line:  
+    cd file_directory  
     
     npm install
 
-Executing the file:
-  Windows command line:
-    cd file_directory
+Executing the file:  
+  Windows command line:  
+    cd file_directory  
     electron .
     
     
