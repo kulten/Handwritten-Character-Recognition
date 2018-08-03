@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <link rel = "stylesheet" type = "text/css" href="../css/index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class = "frameBar">
+      Handwritten Character Recognition
+    </div>
+    <div class = "container">
+      <div class = "row inputRow">
+        <div class = "col-11 col-sm-6 offset-sm-2 inputform">
+          <input class = 'form-control'type = "text" id="asdf" value="testImage.jpg"></input>
+        </div>
+        <div class = "col-1 col-sm-2 inputform">
+          <button  class = 'btn' onclick="a()"> Open </button>
+        </div>
+      </div>
+      <div class = "row">
+        <div class = "col-12 col-sm-6 offset-sm-3">
+          <img src = "" alt = "" id = "img1"></img>
+        </div>
+      </div>
+      <div class = "row">
+        <div class = "col-12 col-sm-6 offset-sm-3">
+          <p id = "result"></p>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script>
+      const {ipcRenderer} = require('electron')
+
+      function a(){
+        ipcRenderer.send('asynchronous-message', document.getElementById('asdf').value)
+        document.getElementById('img1').src = '../temp/asdf.png'
+
+      }
+      ipcRenderer.on('asynchronous-reply',(event,arg)=>{
+        document.getElementById('result').innerHTML =arg
+      })
+    </script>
+  </body>
+
+</html>
