@@ -26,7 +26,7 @@ Npm
     
     npm install
 
-Executing the file
+Executing the file:
   Windows command line:
     cd file_directory
     electron .
