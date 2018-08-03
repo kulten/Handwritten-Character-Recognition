@@ -1,0 +1,26 @@
+{
+  "name": "handwritten-character-recognition",
+  "version": "1.0.0",
+  "description": "Offline handwritten character recognition using deep convolutional neural networks. It can recognize both handwritten digits (0 -9) and\r handwritten letters (upper-case and lower-case).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kulten/Handwritten-Character-Recognition.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kulten/Handwritten-Character-Recognition/issues"
+  },
+  "homepage": "https://github.com/kulten/Handwritten-Character-Recognition#readme",
+  "dependencies": {
+    "bootstrap": "^4.1.3",
+    "child_process": "^1.0.2",
+    "electron": "^2.0.6",
+    "remote": "^0.2.6"
+  }
+}
